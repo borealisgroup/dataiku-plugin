@@ -13,7 +13,7 @@ def process(row):
     
     
     
-    return len(row)
+    return dss_variables
 
 # import dataiku
 # import pandas as pd, numpy as np

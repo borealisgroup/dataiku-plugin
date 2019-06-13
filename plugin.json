@@ -13,9 +13,9 @@
     // Meta data for display purposes
     "meta" : {
         // Name of this plugin that appears in the interface.
-        "label" : "Plugin borealisgroup",
+        "label" : "borealisgroup-plugins",
 
-        "description" : "Reusable code used in borealisgroup",
+        "description" : "Custom plugins used in borealisgroup",
         "author" : "ziad.beyens@borealisgroup.com",
 
         // The icon of a plugin must be one of the FontAwesome 3.1 icons

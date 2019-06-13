@@ -38,10 +38,11 @@
             "selectChoices": [
                 {
                     "value": "higher",
-                    "label": "display name for val_x"
+                    "label": "higher"
                 },
                 {
-                    "value": "higher"
+                    "value": "lower",
+                    "label": "lower"
                 },
             ]
         }

@@ -3,7 +3,7 @@
     /* Meta data for display purposes */
     "meta" : {
         "label" : "Delete columns by correlation",
-        "description" : "This processor removes one or several columns based on the correlation",
+        "description" : "This processor removes one or several columns based on the correlation.",
         "icon" : "icon-puzzle-piece"
     },
     
@@ -24,33 +24,24 @@
 
     "params": [
         {
-            "name": "parameter1",
-            "label" : "User-readable name",
-            "type": "STRING",
+            "name": "threshold",
+            "type": "DOUBLE",
+            "defaultValue": 0.9,
             "description":"Some documentation for parameter1",
             "mandatory" : true
-        },
-        {
-            "name": "parameter2",
-            "type": "INT",
-            "defaultValue" : 42
-            /* Note that standard json parsing will return it as a double in Python (instead of an int), so you need to write
-               int(self.config()['parameter2'])
-            */
         },
 
         /* A "SELECT" parameter is a multi-choice selector. Choices are specified using the selectChoice field*/
         {
-            "name": "parameter8",
+            "name": "condition",
             "type": "SELECT",
             "selectChoices": [
                 {
-                    "value": "val_x",
+                    "value": "higher",
                     "label": "display name for val_x"
                 },
                 {
-                    "value": "val_y",
-                    "label": "display name for val_y"
+                    "value": "higher",
                 },
             ]
         }

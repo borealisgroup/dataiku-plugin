@@ -47,6 +47,12 @@
             "mandatory" : true,
             "minD": -1,
             "maxD": 1
+        },
+        {
+            "name": "col",
+            "type": "COLUMN",
+            "description":"Some documentation for parameter1",
+            "mandatory" : true
         }
     ]
 }

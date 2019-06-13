@@ -1,58 +1,58 @@
 /* This file is the descriptor for the Custom jython step filter-correlation */
 {
-    /* Meta data for display purposes */
-    "meta" : {
-        "label" : "Delete columns by correlation",
-        "description" : "This processor removes one or several columns based on the correlation.",
-        "icon" : "icon-puzzle-piece",
-        "iconColor": "blue"
-    },
-    
-    /* 
-     * the processor mode, dictating what output is expected:
-     * - CELL : the code outputs a value
-     * - ROW : the code outputs a row
-     * - ROWS : the code outputs an array of rows
-     */
-    "mode" : "CELL",
+  /* Meta data for display purposes */
+  "meta" : {
+      "label" : "Delete columns by correlation",
+      "description" : "This processor removes one or several columns based on the correlation.",
+      "icon" : "icon-puzzle-piece",
+      "iconColor": "blue"
+  },
+  
+  /* 
+   * the processor mode, dictating what output is expected:
+   * - CELL : the code outputs a value
+   * - ROW : the code outputs a row
+   * - ROWS : the code outputs an array of rows
+   */
+  "mode" : "CELL",
 
-    /* The field "params" holds a list of all the params
-       for wich the user will be prompted for values:
+  /* The field "params" holds a list of all the params
+     for wich the user will be prompted for values:
 
-       The available parameter types are:
-       STRING, INT, DOUBLE, BOOLEAN, PASSWORD, SELECT, MAP, TEXTAREA
-    */
+     The available parameter types are:
+     STRING, INT, DOUBLE, BOOLEAN, PASSWORD, SELECT, MAP, TEXTAREA
+  */
 
-    "params": [
-        {
-            "name": "condition",
-            "type": "SELECT",
-            "defaultValue": "higher",
-            "selectChoices": [
-                {
-                    "value": "higher",
-                    "label": "higher"
-                },
-                {
-                    "value": "lower",
-                    "label": "lower"
-                },
-            ]
-        },
-        {
-            "name": "threshold",
-            "type": "DOUBLE",
-            "defaultValue": 0.9,
-            "description":"Some documentation for parameter1",
-            "mandatory" : true,
-            "minD": -1,
-            "maxD": 1
-        },
-        {
-            "name": "col",
-            "type": "COLUMN",
-            "description":"Some documentation for parameter1",
-            "mandatory" : true
-        }
-    ]
+  "params": [
+      {
+          "name": "condition",
+          "type": "SELECT",
+          "defaultValue": "higher",
+          "selectChoices": [
+              {
+                  "value": "higher",
+                  "label": "higher"
+              },
+              {
+                  "value": "lower",
+                  "label": "lower"
+              },
+          ]
+      },
+      {
+          "name": "threshold",
+          "type": "DOUBLE",
+          "defaultValue": 0.9,
+          "description":"Some documentation for parameter1",
+          "mandatory" : true,
+          "minD": -1,
+          "maxD": 1
+      },
+      {
+          "name": "col",
+          "type": "COLUMN",
+          "description":"Some documentation for parameter1",
+          "mandatory" : true
+      }
+  ]
 }

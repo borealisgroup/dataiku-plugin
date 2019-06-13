@@ -1,4 +1,4 @@
 // This file is the descriptor for the Python Notebook Template borealisgroup_correlation-analysis
 {
-    "label" : "This notebook helps you study the correlations between the features in your data, using various data visualizations"
+    "label" : "Correlation analysis"
 }

@@ -8,4 +8,6 @@
 def process(row):
     # row is a dict of the row on which the step is applied
 
+    print(row)
+    
     return len(row)

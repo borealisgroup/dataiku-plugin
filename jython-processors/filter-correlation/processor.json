@@ -44,7 +44,9 @@
             "type": "DOUBLE",
             "defaultValue": 0.9,
             "description":"Some documentation for parameter1",
-            "mandatory" : true
+            "mandatory" : true,
+            "minD": -1,
+            "maxD": 1
         }
     ]
 }

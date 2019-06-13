@@ -5,7 +5,7 @@
         "label" : "Delete columns by correlation",
         "description" : "This processor removes one or several columns based on the correlation.",
         "icon" : "icon-puzzle-piece",
-        "iconColor": "blue",
+        "iconColor": "blue"
     },
     
     /* 

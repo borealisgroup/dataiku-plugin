@@ -25,17 +25,9 @@
 
     "params": [
         {
-            "name": "threshold",
-            "type": "DOUBLE",
-            "defaultValue": 0.9,
-            "description":"Some documentation for parameter1",
-            "mandatory" : true
-        },
-
-        /* A "SELECT" parameter is a multi-choice selector. Choices are specified using the selectChoice field*/
-        {
             "name": "condition",
             "type": "SELECT",
+            "defaultValue": "higher",
             "selectChoices": [
                 {
                     "value": "higher",
@@ -46,6 +38,13 @@
                     "label": "lower"
                 },
             ]
+        },
+        {
+            "name": "threshold",
+            "type": "DOUBLE",
+            "defaultValue": 0.9,
+            "description":"Some documentation for parameter1",
+            "mandatory" : true
         }
     ]
 }

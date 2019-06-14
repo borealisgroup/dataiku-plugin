@@ -53,7 +53,7 @@
             "defaultValue" : 0.9,
             "maxD": 1,
             "minD": 0,
-            "description":"Columns with correlations above the threshold will be removed",
+            "description":"Columns with correlations above the absolute value of threshold will be removed",
             "mandatory" : true
         }
     ],

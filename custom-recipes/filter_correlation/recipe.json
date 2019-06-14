@@ -48,6 +48,23 @@
 
     "params": [
         {
+            "name": "condition",
+            "label" : "Condition",
+            "type": "SELECT",
+            "defaultValue" : "above",
+            "description":"Correlation condition to remove columns Columns with correlations above the absolute value of threshold will be removed",
+            "selectChoices": [
+                {
+                    "value": "above",
+                    "label": "above"
+                },
+                {
+                    "value": "below",
+                    "label": "below"
+                },
+            ]
+        },
+        {
             "name": "threshold",
             "label" : "Threshold",
             "type": "DOUBLE",

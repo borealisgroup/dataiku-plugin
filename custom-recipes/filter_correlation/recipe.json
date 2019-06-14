@@ -86,7 +86,7 @@
         {
             "name": "keep_pattern",
             "label" : "Columns to keep (pattern)",
-            "type": "ARRAY",
+            "type": "COLUMNS",
             "description":"Pattern pof columns to keep"
         }
     ],

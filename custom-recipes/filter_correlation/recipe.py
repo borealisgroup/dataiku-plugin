@@ -36,6 +36,7 @@ output_A_datasets = [dataiku.Dataset(name) for name in output_A_names]
 # user will be prompted for values.
 
 # The configuration is simply a map of parameters, and retrieving the value of one of them is simply:
+condition = get_recipe_config()['condition']
 threshold = get_recipe_config()['threshold']
 keep_multiple = get_recipe_config()['keep_multiple']
 keep_patterns = get_recipe_config()['keep_patterns']
@@ -63,7 +64,7 @@ from wp8 import remove_volume_without_close
 input_dataset = input_A_datasets[0]
 df = input_dataset.get_dataframe()
 
-rejected_variables = get_rejected_variables(df, threshold=threshold, keep_multiple=keep_multiple, keep_patterns=keep_patterns)
+rejected_variables = get_rejected_variables(df, threshold=threshold, keep_multiple=keep_multiple, keep_patterns=keep_patterns, condition=condition)
 output = df.drop(rejected_variables, axis=1)
 
 # df_without_volume = remove_volume_without_close(df)

@@ -78,16 +78,16 @@
         },
         {
             "name": "keep",
-            "label" : "Columns to keep",
+            "label" : "Columns to keep (multiple)",
             "type": "COLUMNS",
-            "description": "List of columns to keep",
+            "description": "Enter the column names to keep",
             "columnRole": "input"
         },
         {
             "name": "keep_pattern",
             "label" : "Columns to keep (pattern)",
             "type": "COLUMNS",
-            "description":"Ignore t"
+            "description":"Enter a pattern to keep"
         }
     ],
     

@@ -5,7 +5,7 @@
         "label" : "Filter columns by correlation",
         "description" : "Remove the columns with high correlation",
         "icon" : "icon-filter",
-        "iconColor": "blue"
+        "iconColor": "sky"
     },
 
     "kind" : "PYTHON",

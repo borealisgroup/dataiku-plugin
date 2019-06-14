@@ -23,7 +23,7 @@
         "iconColor": "blue",
 
         // URL where the user can learn more about the plugin
-        "url" : "https://www.dataiku.com",
+        //"url" : "https://www.dataiku.com",
 
         // List of tags for filtering the list of plugins
         "tags" : ["nicedataset", "dev"]

@@ -63,7 +63,7 @@ from wp8 import remove_volume_without_close
 input_dataset = input_A_datasets[0]
 df = input_dataset.get_dataframe()
 
-rejected_variables = get_rejected_variables(df, threshold=threshold, keep_multiple)
+rejected_variables = get_rejected_variables(df, threshold=threshold, keep_multiple=keep_multiple, keep_patterns=keep_patterns)
 print(rejected_variables)
 output = df.drop(rejected_variables, axis=1)
 

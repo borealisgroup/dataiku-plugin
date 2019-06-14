@@ -27,7 +27,6 @@ input_A_datasets = [dataiku.Dataset(name) for name in input_A_names]
 # For outputs, the process is the same:
 output_A_names = get_output_names_for_role('main_output')
 output_A_datasets = [dataiku.Dataset(name) for name in output_A_names]
-print(output_A_datasets)
 
 
 # The configuration consists of the parameters set up by the user in the recipe Settings tab.
@@ -38,6 +37,7 @@ print(output_A_datasets)
 
 # The configuration is simply a map of parameters, and retrieving the value of one of them is simply:
 threshold = get_recipe_config()['threshold']
+keep = get_recipe_config()['keep']
 
 # For optional parameters, you should provide a default value in case the parameter is not present:
 # my_variable = get_recipe_config().get('parameter_name', None)
@@ -62,7 +62,7 @@ from wp8 import remove_volume_without_close
 input_dataset = input_A_datasets[0]
 df = input_dataset.get_dataframe()
 
-rejected_variables = get_rejected_variables(df, threshold=threshold)
+rejected_variables = get_rejected_variables(df, threshold=threshold, substring_overrides=keep)
 print(rejected_variables)
 output = df.drop(rejected_variables, axis=1)
 

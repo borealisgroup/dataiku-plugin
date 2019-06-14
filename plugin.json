@@ -19,7 +19,7 @@
         "author" : "ziad.beyens@borealisgroup.com",
 
         // The icon of a plugin must be one of the FontAwesome 3.1 icons
-        "icon" : "icon-filter",
+        "icon" : "icon-puzzle-piece",
         "iconColor": "blue",
 
         "licenseInfo" : "Apache Software License",

@@ -80,14 +80,14 @@
             "name": "keep",
             "label" : "Columns to keep (multiple)",
             "type": "COLUMNS",
-            "description": "Enter the column names to keep",
+            "description": "List of columns to keep",
             "columnRole": "input"
         },
         {
             "name": "keep_pattern",
             "label" : "Columns to keep (pattern)",
             "type": "COLUMNS",
-            "description":"Enter a pattern to keep"
+            "description":"Pattern of columns to keep"
         }
     ],
     

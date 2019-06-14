@@ -37,8 +37,8 @@ output_A_datasets = [dataiku.Dataset(name) for name in output_A_names]
 
 # The configuration is simply a map of parameters, and retrieving the value of one of them is simply:
 threshold = get_recipe_config()['threshold']
-keep = get_recipe_config()['keep']
-keep_pattern = get_recipe_config()['keep_pattern']
+keep_multiple = get_recipe_config()['keep_multiple']
+keep_patterns = get_recipe_config()['keep_patterns']
 
 print(keep)
 print(keep_pattern)

@@ -77,7 +77,7 @@
             "mandatory" : true
         },
         {
-            "name": "keep",
+            "name": "keep_multiple",
             "label" : "Columns to keep (multiple)",
             "type": "COLUMNS",
             "description": "List of columns to keep",

@@ -4,7 +4,7 @@
     "meta" : {
         "label" : "Filter columns by correlation",
         "description" : "Remove the columns with high correlation",
-        "icon" : "filter"
+        "icon" : "icon-filter"
     },
 
     "kind" : "PYTHON",

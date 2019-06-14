@@ -87,7 +87,7 @@
             "name": "keep_patterns",
             "label" : "Columns to keep (pattern)",
             "type": "COLUMNS",
-            "description":"Pattern pof columns to keep"
+            "description":"Patterns of columns to keep"
         }
     ],
     

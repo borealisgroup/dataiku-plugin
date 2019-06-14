@@ -86,7 +86,7 @@
         {
             "name": "keep_patterns",
             "label" : "Columns to keep (pattern)",
-            "type": "ARRAY",
+            "type": "COLUMNS",
             "description":"Patterns of columns to keep"
         }
     ],

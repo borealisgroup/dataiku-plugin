@@ -49,7 +49,7 @@
     "params": [
         {
             "name": "threshold",
-            "label" : "Threshold for correlation",
+            "label" : "Threshold",
             "type": "DOUBLE",
             "defaultValue" : 0.9,
             "maxD": 1,

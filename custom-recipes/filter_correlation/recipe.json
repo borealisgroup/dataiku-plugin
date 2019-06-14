@@ -79,7 +79,7 @@
             "label" : "Columns to keep",
             "type": "COLUMNS",
             "description":"Columns to keep"
-        },
+        }
     ],
     
     // The field "resourceKeys" holds a list of keys that allows to limit the number

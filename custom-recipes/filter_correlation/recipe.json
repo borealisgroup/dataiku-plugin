@@ -78,8 +78,7 @@
             "name": "keep",
             "label" : "Columns to keep",
             "type": "COLUMNS",
-            "description":"Correlation condition to remove columns Columns with correlations above the absolute value of threshold will be removed",
-            
+            "description":"Columns to keep",
         },
     ],
     

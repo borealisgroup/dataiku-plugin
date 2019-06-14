@@ -3,7 +3,7 @@
     // Meta data for display purposes
     "meta" : {
         "label" : "Filter columns by correlation",
-        "description" : "Remove the columns with high correlation",
+        "description" : "Remove the columns with high or low correlation",
         "icon" : "icon-filter",
         "iconColor": "blue"
     },

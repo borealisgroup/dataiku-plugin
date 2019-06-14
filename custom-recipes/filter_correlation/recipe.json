@@ -31,7 +31,7 @@
 
 	"outputRoles" : [
         {
-            "name": "main_output",
+            "name": "output",
             "label": "Output dataset",
             "description": "The dataset without the highly correlated columns.",
             "arity": "UNARY",

@@ -10,6 +10,8 @@
 
     "kind" : "PYTHON",
     
+    
+    
 
     // Inputs and outputs are defined by roles. In the recipe's I/O tab, the user can associate one
     // or more dataset to each input and output role.
@@ -78,7 +80,8 @@
             "name": "keep",
             "label" : "Columns to keep",
             "type": "COLUMN",
-            "description":"Columns to keep"
+            "description":"Columns to keep",
+            "columnRole": "input"
         }
     ],
     

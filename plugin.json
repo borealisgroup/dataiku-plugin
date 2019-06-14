@@ -20,7 +20,7 @@
 
         // The icon of a plugin must be one of the FontAwesome 3.1 icons
         "icon" : "icon-puzzle-piece",
-        "iconColor": "#00000",
+        "iconColor": "blue",
 
         // URL where the user can learn more about the plugin
         //"url" : "https://www.dataiku.com",

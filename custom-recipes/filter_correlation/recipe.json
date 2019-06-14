@@ -78,7 +78,7 @@
             "name": "keep",
             "label" : "Columns to keep",
             "type": "COLUMNS",
-            "description":"Columns to keep",
+            "description":"Columns to keep"
         },
     ],
     

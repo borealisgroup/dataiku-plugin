@@ -86,7 +86,7 @@
         {
             "name": "keep_pattern",
             "label" : "Columns to keep (pattern)",
-            "type": "KEY_VALUE_LIST",
+            "type": "MAP ",
             "description":"Pattern pof columns to keep"
         }
     ],

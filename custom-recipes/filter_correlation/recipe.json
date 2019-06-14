@@ -53,7 +53,6 @@
             "name": "condition",
             "label" : "Removal condition",
             "type": "SELECT",
-            "defaultValue" : "above",
             "description":"Correlation condition to remove columns Columns with correlations above the absolute value of threshold will be removed",
             "selectChoices": [
                 {

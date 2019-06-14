@@ -58,7 +58,7 @@ from eda.correlations import get_rejected_variables
 from wp8 import remove_volume_without_close
 
 # Read the input
-input_dataset = input_datasets[0]
+input_dataset = input_A_datasets[0]
 df = input_dataset.get_dataframe()
 
 rejected_variables_99 = get_rejected_variables(df, threshold=0.99)
@@ -69,5 +69,5 @@ df = df.drop(rejected_variables_99, axis=1)
 # rejected_variables_90 = get_rejected_variables(df, threshold=0.90, substring_overrides='LCOc1')
 
 # Write the output to the output dataset
-output_dataset =  output_datasets[0]
+output_dataset =  output_A_datasets[0]
 output_dataset.write_with_schema(pd.DataFrame(output))

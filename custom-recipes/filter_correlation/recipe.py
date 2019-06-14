@@ -40,9 +40,6 @@ threshold = get_recipe_config()['threshold']
 keep_multiple = get_recipe_config()['keep_multiple']
 keep_patterns = get_recipe_config()['keep_patterns']
 
-print(keep)
-print(keep_pattern)
-
 # For optional parameters, you should provide a default value in case the parameter is not present:
 # my_variable = get_recipe_config().get('parameter_name', None)
 
@@ -66,7 +63,7 @@ from wp8 import remove_volume_without_close
 input_dataset = input_A_datasets[0]
 df = input_dataset.get_dataframe()
 
-rejected_variables = get_rejected_variables(df, threshold=threshold, substring_overrides=keep)
+rejected_variables = get_rejected_variables(df, threshold=threshold, keep_multiple)
 print(rejected_variables)
 output = df.drop(rejected_variables, axis=1)
 

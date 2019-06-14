@@ -49,7 +49,7 @@
     "params": [
         {
             "name": "condition",
-            "label" : "Condition",
+            "label" : "Removal condition",
             "type": "SELECT",
             "defaultValue" : "above",
             "description":"Correlation condition to remove columns Columns with correlations above the absolute value of threshold will be removed",
@@ -73,7 +73,15 @@
             "minD": 0,
             "description":"Columns with correlations above the absolute value of threshold will be removed",
             "mandatory" : true
-        }
+        },
+        {
+            "name": "keep",
+            "label" : "Columns to keep",
+            "type": "COLUMNS",
+            "defaultValue" : "above",
+            "description":"Correlation condition to remove columns Columns with correlations above the absolute value of threshold will be removed",
+            
+        },
     ],
     
     // The field "resourceKeys" holds a list of keys that allows to limit the number

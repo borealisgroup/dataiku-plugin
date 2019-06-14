@@ -22,8 +22,6 @@
         "icon" : "icon-puzzle-piece",
         "iconColor": "blue",
 
-        "licenseInfo" : "Apache Software License",
-
         // URL where the user can learn more about the plugin
         "url" : "https://www.dataiku.com",
 

@@ -62,7 +62,7 @@ input_dataset = input_A_datasets[0]
 df = input_dataset.get_dataframe()
 
 rejected_variables_99 = get_rejected_variables(df, threshold=0.99)
-df = df.drop(rejected_variables_99, axis=1)
+output = df.drop(rejected_variables_99, axis=1)
 
 # df_without_volume = remove_volume_without_close(df)
 

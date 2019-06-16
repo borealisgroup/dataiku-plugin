@@ -56,9 +56,9 @@ cols = df_filtered.columns
 # We'll only compute correlations on numerical columns
 # So extract all pairs of names of numerical columns
 pairs = []
-for i in range(len(cols)):
+for i in range(len(df.columns)):
     for j in range(i + 1, len(cols)):
-        col1 = cols[i]
+        col1 = df.columns[i]
         col2 = cols[j]
         if df[col1].dtype == "float64" and \
            df[col2].dtype == "float64":

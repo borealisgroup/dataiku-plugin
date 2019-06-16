@@ -62,18 +62,17 @@ for i in range(len(column_names)):
            df[col2].dtype == "float64":
             pairs.append((col1, col2))
 
+df_filtered = filter_columns(df, filter_method=filter_method, col_multiple=col_multiple, col_patterns=col_patterns)
+            
 # Compute the correlation for each pair, and write a
 # row in the output array
 output = []
 for pair in pairs:
     corr = df[[pair[0], pair[1]]].corr().iloc[0][1]
-    if np.abs(corr) > threshold:
+    if np.abs(corr) > threshold and pair[0] in df_filtered.columns:
         output.append({"col0" : pair[0],
                      "col1" : pair[1],
                      "corr" :  corr})
-
-df_out = pd.DataFrame(output)
-df_out = filter_columns(df_out, filter_method=filter_method, col_multiple=col_multiple, col_patterns=col_patterns)
         
 # output
 # corr = df.corr()
@@ -88,4 +87,4 @@ df_out = filter_columns(df_out, filter_method=filter_method, col_multiple=col_mu
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write the output to the output dataset
 output_dataset =  output_datasets[0]
-output_dataset.write_with_schema(df_out)
+output_dataset.write_with_schema(pd.DataFrame(output))

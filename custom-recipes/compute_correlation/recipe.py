@@ -58,7 +58,7 @@ filtered_cols = df_filtered.columns
 # So extract all pairs of names of numerical columns
 pairs = []
 for i in range(len(cols)):
-    for j in range(i + 1, cols):
+    for j in range(i + 1, len(cols)):
         col1 = df.columns[i]
         col2 = cols[j]
         print(col2)

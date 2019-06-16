@@ -89,7 +89,7 @@
         },
         {
             "name": "col_patterns",
-            "label" : "Columns (multiple)",
+            "label" : "Columns (patterns)",
             "type": "COLUMNS",
             "description":"Patterns of columns",
             "visibilityCondition": "model.filter_method != 'none'"

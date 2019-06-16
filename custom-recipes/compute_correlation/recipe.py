@@ -52,6 +52,7 @@ df = data_targets_filter_high_corr_df
 
 df_filtered = filter_columns(df, filter_method=filter_method, col_multiple=col_multiple, col_patterns=col_patterns)
 cols = df_filtered.columns
+print(cols)
 
 # We'll only compute correlations on numerical columns
 # So extract all pairs of names of numerical columns

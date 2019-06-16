@@ -84,13 +84,15 @@
             "label" : "Columns (multiple)",
             "type": "COLUMNS",
             "description": "Keep empty for no filtering",
-            "columnRole": "input"
+            "columnRole": "input",
+            "visibilityCondition": "model.filter_method == 'none'"
         },
         {
             "name": "col_patterns",
             "label" : "Columns (pattern)",
             "type": "COLUMNS",
-            "description":"Keep empty for no filtering"
+            "description":"Keep empty for no filtering",
+            "visibilityCondition": "model.filter_method == 'none'"
         }
     ],
 

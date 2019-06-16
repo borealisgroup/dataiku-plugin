@@ -60,11 +60,15 @@
         },
         {
             "name": "filter_method",
-            "label" : "Columns to...",
+            "label" : "Filter",
             "type": "SELECT",
-            "defaultValue" : "remove",
-            "description": "Filter method",
+            "defaultValue" : "none",
+            "description": "Filter columns",
             "selectChoices": [
+                {
+                    "value": "none",
+                    "label": "None"
+                },
                 {
                     "value": "remove",
                     "label": "Remove"

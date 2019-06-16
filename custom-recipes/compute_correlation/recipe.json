@@ -59,15 +59,32 @@
             "minD": 0,
         },
         {
-            "name": "keep_multiple",
-            "label" : "Columns to show (multiple)",
+            "name": "col_action",
+            "label" : "Columns to...",
+            "type": "SELECT",
+            "defaultValue" : "remove",
+            "description": "",
+            "selectChoices": [
+                {
+                    "value": "remove",
+                    "label": "Remove"
+                },
+                {
+                    "value": "keep",
+                    "label": "Keep"
+                },
+            ]
+        },
+        {
+            "name": "col_multiple",
+            "label" : "Columns (multiple)",
             "type": "COLUMNS",
             "description": "Keep empty for no filtering",
             "columnRole": "input"
         },
         {
-            "name": "keep_patterns",
-            "label" : "Columns to show (pattern)",
+            "name": "col_patterns",
+            "label" : "Columns (pattern)",
             "type": "COLUMNS",
             "description":"Keep empty for no filtering"
         }

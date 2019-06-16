@@ -29,8 +29,9 @@ output_datasets = [dataiku.Dataset(name) for name in output_names]
 
 # Retrieve parameter values from the of map of parameters
 threshold = get_recipe_config()['threshold']
-keep_multiple = get_recipe_config()['keep_multiple']
-keep_patterns = get_recipe_config()['keep_patterns']
+filter_method = get_recipe_config()['filter_method']
+col_multiple = get_recipe_config()['col_multiple']
+col_patterns = get_recipe_config()['col_patterns']
 
 # Read the input
 input_dataset = input_datasets[0]
@@ -73,10 +74,8 @@ for pair in pairs:
 
 df_out = pd.DataFrame(output)
 
-cols = []
-for col in df_out.columns:
-    if match_patterns(col, keep_patterns) or (keep_multiple and col in keep_multiple):
-        cols.append(col)
+df_out = filter_columns(df_out, filter_method=filter_method, )
+
 
 if (len(cols) == 0):
     cols = df_out.columns

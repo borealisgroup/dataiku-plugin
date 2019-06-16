@@ -2,8 +2,8 @@
 {
     // Meta data for display purposes
     "meta" : {
-        "label" : "Custom recipe from recipe compute_correlation",
-        "description" : "Custom recipe",
+        "label" : "Compute correlations between variables",
+        "description" : "",
         "icon" : "icon-beaker",
         "iconColor": "blue"
     },

@@ -43,6 +43,7 @@ column_names = df.columns
 #############################
 import pandas as pd, numpy as np
 from dataiku import pandasutils as pdu
+from utils import match_patterns
 
 # Read recipe inputs
 data_targets_filter_high_corr = dataiku.Dataset("data_without_high_corr")
@@ -72,7 +73,13 @@ for pair in pairs:
 
 df_out = pd.DataFrame(output)
 
-if 
+cols = []
+for col in df_out.columns:
+    if match_patterns(col, keep_patterns) or (keep_multiple and col in keep_multiple):
+        cols.append(col)
+
+if (len(cols) == 0):
+    cols = df_out.columns
         
 # output
 # corr = df.corr()

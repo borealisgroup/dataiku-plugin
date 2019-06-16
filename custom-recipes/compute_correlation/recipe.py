@@ -49,26 +49,24 @@ from eda.filters import filter_columns
 data_targets_filter_high_corr = dataiku.Dataset("data_without_high_corr")
 data_targets_filter_high_corr_df = data_targets_filter_high_corr.get_dataframe()
 df = data_targets_filter_high_corr_df
+cols = df.columns
 
 df_filtered = filter_columns(df, filter_method=filter_method, col_multiple=col_multiple, col_patterns=col_patterns)
-cols = df_filtered.columns
-print(cols)
+filtered_cols = df_filtered.columns
 
 # We'll only compute correlations on numerical columns
 # So extract all pairs of names of numerical columns
 pairs = []
-for i in range(len(df.columns)):
-    for j in range(i + 1, len(cols)):
+for i in range(len(cols)):
+    for j in range(i + 1, cols):
         col1 = df.columns[i]
-        print(df.columns[i])
         col2 = cols[j]
         print(col2)
         if df[col1].dtype == "float64" and \
-           df[col2].dtype == "float64":
+           df[col2].dtype == "float64" and col2 in filtered_cols:
             pairs.append((col1, col2))
 
-print('hey')
-print(pairs)
+
 
 # Compute the correlation for each pair, and write a
 # row in the output array

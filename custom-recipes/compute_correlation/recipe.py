@@ -80,7 +80,7 @@ for pair in pairs:
                      "corr" :  corr})
 
 df_out = pd.DataFrame(output)
-if (df_out['corr']):
+if ('corr' in df_out.columns):
     df_out = df_out.sort_values('corr', ascending=False)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE

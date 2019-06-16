@@ -29,6 +29,8 @@ output_datasets = [dataiku.Dataset(name) for name in output_names]
 
 # Retrieve parameter values from the of map of parameters
 threshold = get_recipe_config()['threshold']
+keep_multiple = get_recipe_config()['keep_multiple']
+keep_pattern = get_recipe_config()['keep_pattern']
 
 # Read the input
 input_dataset = input_datasets[0]
@@ -68,6 +70,10 @@ for pair in pairs:
                      "col1" : pair[1],
                      "corr" :  corr})
 
+df_out = pd.DataFrame(output)
+
+if 
+        
 # output
 # corr = df.corr()
 
@@ -81,4 +87,4 @@ for pair in pairs:
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write the output to the output dataset
 output_dataset =  output_datasets[0]
-output_dataset.write_with_schema(pd.DataFrame(output))
+output_dataset.write_with_schema(df_out)

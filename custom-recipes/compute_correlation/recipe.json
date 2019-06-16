@@ -56,7 +56,7 @@
             "description":"Correlations below the threshold will not appear in the output dataset",
             "mandatory" : true,
             "maxD": 1,
-            "minD": 0,
+            "minD": 0
         },
         {
             "name": "filter_method",

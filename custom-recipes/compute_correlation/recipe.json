@@ -63,7 +63,7 @@
             "label" : "Filter",
             "type": "SELECT",
             "defaultValue" : "none",
-            "description": "Filter columns",
+            "description": "Filter columns for col1",
             "selectChoices": [
                 {
                     "value": "none",

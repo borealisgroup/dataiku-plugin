@@ -64,6 +64,7 @@ for i in range(len(df.columns)):
            df[col2].dtype == "float64":
             pairs.append((col1, col2))
 
+print('hey')
 print(pairs)
 
 # Compute the correlation for each pair, and write a

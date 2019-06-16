@@ -64,6 +64,8 @@ for i in range(len(column_names)):
         if df[col1].dtype == "float64" and \
            df[col2].dtype == "float64" and (col1 in cols or col2 in cols):
             print(col1 in cols or col2 in cols)
+            print(col1)
+            print(col2)
             pairs.append((col1, col2))
 
 

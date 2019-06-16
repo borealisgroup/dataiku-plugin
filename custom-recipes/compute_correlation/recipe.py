@@ -76,7 +76,7 @@ for pair in pairs:
                      "corr" :  corr})
 
 df_out = pd.DataFrame(output) 
-index = abs(df_out).sort_values('corr', ascending=False).index
+index = df_out.abs().sort_values('corr', ascending=False).index
 df_out.index = index
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE

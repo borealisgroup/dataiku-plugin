@@ -70,12 +70,12 @@
                     "label": "None"
                 },
                 {
-                    "value": "remove",
-                    "label": "Remove"
-                },
-                {
                     "value": "keep",
                     "label": "Keep"
+                },
+                {
+                    "value": "remove",
+                    "label": "Remove"
                 }
             ]
         },

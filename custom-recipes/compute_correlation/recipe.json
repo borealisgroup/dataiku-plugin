@@ -59,11 +59,11 @@
             "minD": 0,
         },
         {
-            "name": "col_action",
+            "name": "filter_method",
             "label" : "Columns to...",
             "type": "SELECT",
             "defaultValue" : "remove",
-            "description": "",
+            "description": "Filter method",
             "selectChoices": [
                 {
                     "value": "remove",

@@ -74,18 +74,12 @@ for pair in pairs:
         output.append({"col0" : pair[0],
                      "col1" : pair[1],
                      "corr" :  corr})
-        
-# output
-# corr = df.corr()
 
-# targets = ['7d_close_higher', '14d_close_higher', '30d_close_higher', '50d_close_higher', '200d_close_higher']
-# df_targets = df[targets]
-# df_corr_targets = corr[targets]
-# df_corr_targets = df_corr_targets.drop(targets)
-# df_corr_targets.reset_index(inplace=True)
-# df_corr_targets = df_corr_targets.sort_values(by=['7d_close_higher'], ascending=False)
+df_out = pd.DataFrame(output) 
+index = abs(df_out).sort_values('corr', ascending=False).index
+df_out.index = index
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write the output to the output dataset
 output_dataset =  output_datasets[0]
-output_dataset.write_with_schema(pd.DataFrame(output))
+output_dataset.write_with_schema(df_out)

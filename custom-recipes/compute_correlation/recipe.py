@@ -30,7 +30,7 @@ output_datasets = [dataiku.Dataset(name) for name in output_names]
 # Retrieve parameter values from the of map of parameters
 threshold = get_recipe_config()['threshold']
 keep_multiple = get_recipe_config()['keep_multiple']
-keep_pattern = get_recipe_config()['keep_pattern']
+keep_patterns = get_recipe_config()['keep_patterns']
 
 # Read the input
 input_dataset = input_datasets[0]

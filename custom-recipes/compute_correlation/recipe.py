@@ -51,6 +51,8 @@ data_targets_filter_high_corr = dataiku.Dataset("data_without_high_corr")
 data_targets_filter_high_corr_df = data_targets_filter_high_corr.get_dataframe()
 df = data_targets_filter_high_corr_df
 
+df_filtered = filter_columns(df, filter_method=filter_method, col_multiple=col_multiple, col_patterns=col_patterns)
+
 # We'll only compute correlations on numerical columns
 # So extract all pairs of names of numerical columns
 pairs = []
@@ -59,19 +61,16 @@ for i in range(len(column_names)):
         col1 = column_names[i]
         col2 = column_names[j]
         if df[col1].dtype == "float64" and \
-           df[col2].dtype == "float64":
+           df[col2].dtype == "float64" and (col1 in df_filtered.columns or col2 in df_filtered.columns):
             pairs.append((col1, col2))
 
-df_filtered = filter_columns(df, filter_method=filter_method, col_multiple=col_multiple, col_patterns=col_patterns)
-
-print(df_filtered.columns)
 
 # Compute the correlation for each pair, and write a
 # row in the output array
 output = []
 for pair in pairs:
     corr = df[[pair[0], pair[1]]].corr().iloc[0][1]
-    if np.abs(corr) > threshold and (pair[0] in df_filtered.columns or pair[1] in df_filtered.columns):
+    if np.abs(corr) > threshold:
         output.append({"col0" : pair[0],
                      "col1" : pair[1],
                      "corr" :  corr})

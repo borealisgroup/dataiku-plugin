@@ -59,7 +59,9 @@ pairs = []
 for i in range(len(df.columns)):
     for j in range(i + 1, len(cols)):
         col1 = df.columns[i]
+        print(df.columns[i])
         col2 = cols[j]
+        print(col2)
         if df[col1].dtype == "float64" and \
            df[col2].dtype == "float64":
             pairs.append((col1, col2))

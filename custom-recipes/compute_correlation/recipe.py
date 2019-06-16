@@ -69,7 +69,7 @@ df_filtered = filter_columns(df, filter_method=filter_method, col_multiple=col_m
 output = []
 for pair in pairs:
     corr = df[[pair[0], pair[1]]].corr().iloc[0][1]
-    if np.abs(corr) > threshold and pair[0] in df_filtered.columns:
+    if np.abs(corr) > threshold and pair[0] in df_filtered.columns or pair[1] in df_filtered.columns:
         output.append({"col0" : pair[0],
                      "col1" : pair[1],
                      "corr" :  corr})

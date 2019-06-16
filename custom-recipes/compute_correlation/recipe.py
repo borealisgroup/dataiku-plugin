@@ -75,7 +75,8 @@ for pair in pairs:
                      "col1" : pair[1],
                      "corr" :  corr})
 
-df_out = pd.DataFrame(output) 
+df_out = pd.DataFrame(output)
+print(df_out)
 df_out = df_out.sort_values('corr', ascending=False)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE

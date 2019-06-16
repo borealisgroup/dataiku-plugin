@@ -52,7 +52,7 @@
             "name": "threshold",
             "label" : "Threshold",
             "type": "DOUBLE",
-            "defaultValue" : 0.5,
+            "defaultValue" : 0,
             "description":"Correlations below the threshold will not appear in the output dataset",
             "mandatory" : true
         }

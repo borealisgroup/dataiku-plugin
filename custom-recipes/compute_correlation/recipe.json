@@ -50,7 +50,7 @@
     "params": [
         {
             "name": "threshold",
-            "label" : "Threshold for showing a correlation",
+            "label" : "Threshold",
             "type": "DOUBLE",
             "defaultValue" : 0.5,
             "description":"Correlations below the threshold will not appear in the output dataset",

@@ -52,6 +52,7 @@ data_targets_filter_high_corr_df = data_targets_filter_high_corr.get_dataframe()
 df = data_targets_filter_high_corr_df
 
 df_filtered = filter_columns(df, filter_method=filter_method, col_multiple=col_multiple, col_patterns=col_patterns)
+cols = list(df_filtered.columns)
 
 # We'll only compute correlations on numerical columns
 # So extract all pairs of names of numerical columns
@@ -61,7 +62,7 @@ for i in range(len(column_names)):
         col1 = column_names[i]
         col2 = column_names[j]
         if df[col1].dtype == "float64" and \
-           df[col2].dtype == "float64" and (col1 in df_filtered.columns or col2 in df_filtered.columns):
+           df[col2].dtype == "float64" and (col1 in cols or col2 in cols):
             pairs.append((col1, col2))
 
 

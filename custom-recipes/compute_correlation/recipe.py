@@ -63,7 +63,9 @@ for i in range(len(column_names)):
             pairs.append((col1, col2))
 
 df_filtered = filter_columns(df, filter_method=filter_method, col_multiple=col_multiple, col_patterns=col_patterns)
-            
+
+print(df_filtered.columns)
+
 # Compute the correlation for each pair, and write a
 # row in the output array
 output = []

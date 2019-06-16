@@ -64,6 +64,7 @@ for i in range(len(df.columns)):
            df[col2].dtype == "float64":
             pairs.append((col1, col2))
 
+print(pairs)
 
 # Compute the correlation for each pair, and write a
 # row in the output array
@@ -76,7 +77,6 @@ for pair in pairs:
                      "corr" :  corr})
 
 df_out = pd.DataFrame(output)
-print(df_out)
 df_out = df_out.sort_values('corr', ascending=False)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE

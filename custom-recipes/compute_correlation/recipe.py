@@ -19,41 +19,26 @@ from dataiku.customrecipe import *
 # or more dataset to each input and output role.
 # Roles need to be defined in recipe.json, in the inputRoles and outputRoles fields.
 
-# To  retrieve the datasets of an input role named 'input_A' as an array of dataset names:
-input_A_names = get_input_names_for_role('input_A_role')
-# The dataset objects themselves can then be created like this:
-input_A_datasets = [dataiku.Dataset(name) for name in input_A_names]
+# Retrieve array of dataset names from 'input' role, then create datasets
+input_names = get_input_names_for_role('input')
+input_datasets = [dataiku.Dataset(name) for name in input_names]
 
 # For outputs, the process is the same:
-output_A_names = get_output_names_for_role('main_output')
-output_A_datasets = [dataiku.Dataset(name) for name in output_A_names]
+output_names = get_output_names_for_role('main_output')
+output_datasets = [dataiku.Dataset(name) for name in output_names]
 
+# Retrieve parameter values from the of map of parameters
+threshold = get_recipe_config()['threshold']
 
-# The configuration consists of the parameters set up by the user in the recipe Settings tab.
-
-# Parameters must be added to the recipe.json file so that DSS can prompt the user for values in
-# the Settings tab of the recipe. The field "params" holds a list of all the params for wich the
-# user will be prompted for values.
-
-# The configuration is simply a map of parameters, and retrieving the value of one of them is simply:
-my_variable = get_recipe_config()['parameter_name']
-
-# For optional parameters, you should provide a default value in case the parameter is not present:
-my_variable = get_recipe_config().get('parameter_name', None)
-
-# Note about typing:
-# The configuration of the recipe is passed through a JSON object
-# As such, INT parameters of the recipe are received in the get_recipe_config() dict as a Python float.
-# If you absolutely require a Python int, use int(get_recipe_config()["my_int_param"])
+# Read the input
+input_dataset = input_datasets[0]
+df = input_dataset.get_dataframe()
+column_names = df.columns
 
 
 #############################
 # Your original recipe
 #############################
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-# -*- coding: utf-8 -*-
-import dataiku
 import pandas as pd, numpy as np
 from dataiku import pandasutils as pdu
 
@@ -61,9 +46,6 @@ from dataiku import pandasutils as pdu
 data_targets_filter_high_corr = dataiku.Dataset("data_without_high_corr")
 data_targets_filter_high_corr_df = data_targets_filter_high_corr.get_dataframe()
 df = data_targets_filter_high_corr_df
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-column_names = df.columns
 
 # We'll only compute correlations on numerical columns
 # So extract all pairs of names of numerical columns
@@ -81,9 +63,10 @@ for i in range(len(column_names)):
 output = []
 for pair in pairs:
     corr = df[[pair[0], pair[1]]].corr().iloc[0][1]
-    output.append({"col0" : pair[0],
-                   "col1" : pair[1],
-                   "corr" :  corr})
+    if np.abs(corr) > threshold:
+        output.append({"col0" : pair[0],
+                     "col1" : pair[1],
+                     "corr" :  corr})
 
 # output
 # corr = df.corr()
@@ -96,6 +79,6 @@ for pair in pairs:
 # df_corr_targets = df_corr_targets.sort_values(by=['7d_close_higher'], ascending=False)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-# Write recipe outputs
-corr_targets_0 = dataiku.Dataset("corr_targets_0")
-corr_targets_0.write_with_schema(df_corr_targets)
+# Write the output to the output dataset
+output_dataset =  output_datasets[0]
+output_dataset.write_with_schema(pd.DataFrame(output))

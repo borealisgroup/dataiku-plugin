@@ -57,6 +57,19 @@
             "mandatory" : true,
             "maxD": 1,
             "minD": 0,
+        },
+        {
+            "name": "keep_multiple",
+            "label" : "Columns to show (multiple)",
+            "type": "COLUMNS",
+            "description": "Keep empty for no filtering",
+            "columnRole": "input"
+        },
+        {
+            "name": "keep_patterns",
+            "label" : "Columns to show (pattern)",
+            "type": "COLUMNS",
+            "description":"Keep empty for no filtering"
         }
     ],
 

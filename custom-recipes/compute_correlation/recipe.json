@@ -80,20 +80,20 @@
             ]
         },
         {
-            "name": "col_multiple",
-            "label" : "Columns (multiple)",
-            "type": "COLUMNS",
-            "description": "Keep empty for no filtering",
-            "columnRole": "input",
-            "visibilityCondition": "model.filter_method != 'none'"
-        },
-        {
             "name": "col_patterns",
             "label" : "Columns (pattern)",
             "type": "COLUMNS",
-            "description":"Keep empty for no filtering",
+            "description":"List of columns",
             "visibilityCondition": "model.filter_method != 'none'"
-        }
+        },
+        {
+            "name": "col_multiple",
+            "label" : "Columns (multiple)",
+            "type": "COLUMNS",
+            "description": "Patterns of columns",
+            "columnRole": "input",
+            "visibilityCondition": "model.filter_method != 'none'"
+        },
     ],
 
     // The field "resourceKeys" holds a list of keys that allows to limit the number

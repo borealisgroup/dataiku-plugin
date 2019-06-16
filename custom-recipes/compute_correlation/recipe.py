@@ -73,12 +73,7 @@ for pair in pairs:
                      "corr" :  corr})
 
 df_out = pd.DataFrame(output)
-
-df_out = filter_columns(df_out, filter_method=filter_method, )
-
-
-if (len(cols) == 0):
-    cols = df_out.columns
+df_out = filter_columns(df_out, filter_method=filter_method, col_multiple=col_multiple, col_patterns=col_patterns)
         
 # output
 # corr = df.corr()

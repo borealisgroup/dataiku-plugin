@@ -36,7 +36,6 @@ col_patterns = get_recipe_config()['col_patterns']
 # Read the input
 input_dataset = input_datasets[0]
 df = input_dataset.get_dataframe()
-column_names = df.columns
 
 
 #############################
@@ -58,9 +57,9 @@ cols = df_filtered.columns
 # So extract all pairs of names of numerical columns
 pairs = []
 for i in range(len(cols)):
-    for j in range(i + 1, len(column_names)):
-        col1 = column_names[i]
-        col2 = column_names[j]
+    for j in range(i + 1, len(cols)):
+        col1 = cols[i]
+        col2 = cols[j]
         if df[col1].dtype == "float64" and \
            df[col2].dtype == "float64":
             pairs.append((col1, col2))

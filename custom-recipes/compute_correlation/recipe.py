@@ -44,7 +44,6 @@ column_names = df.columns
 #############################
 import pandas as pd, numpy as np
 from dataiku import pandasutils as pdu
-from utils import match_patterns
 from eda.filters import filter_columns
 
 # Read recipe inputs

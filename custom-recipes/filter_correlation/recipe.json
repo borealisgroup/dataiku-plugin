@@ -95,7 +95,7 @@
             "type": "ARRAY",
             "description":"Absolute value of the threshold for removal",
             "mandatory" : true
-        },
+        }
     ],
     
     // The field "resourceKeys" holds a list of keys that allows to limit the number

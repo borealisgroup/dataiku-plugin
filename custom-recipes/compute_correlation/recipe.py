@@ -56,13 +56,11 @@ print(filtered_cols)
 # So extract all pairs of names of numerical columns
 pairs = []
 for i in range(len(cols)):
-    for j in range(i + 1, len(cols)):
+    for j in range(len(cols)):
         col1 = cols[i]
         col2 = cols[j]
-        print(col1, col2)
         if df[col1].dtype == "float64" and \
-           df[col2].dtype == "float64" and col2 in filtered_cols:
-            print('HE', col1, col2)
+           df[col2].dtype == "float64" and col2 in filtered_cols and (col2, col1) not in pairs:
             pairs.append((col1, col2))
 
 # print

@@ -50,15 +50,15 @@ cols = df.columns
 
 df_filtered = filter_columns(df, filter_method=filter_method, col_multiple=col_multiple, col_patterns=col_patterns)
 filtered_cols = df_filtered.columns
+print(filtered_cols)
 
 # We'll only compute correlations on numerical columns
 # So extract all pairs of names of numerical columns
 pairs = []
 for i in range(len(cols)):
     for j in range(i + 1, len(cols)):
-        col1 = df.columns[i]
+        col1 = cols[i]
         col2 = cols[j]
-        print(col2)
         if df[col1].dtype == "float64" and \
            df[col2].dtype == "float64" and col2 in filtered_cols:
             pairs.append((col1, col2))

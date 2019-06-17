@@ -65,7 +65,7 @@ for i in range(len(cols)):
             print(col1, col2)
             pairs.append((col1, col2))
 
-print
+# print
 
 # Compute the correlation for each pair, and write a
 # row in the output array

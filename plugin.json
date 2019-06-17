@@ -13,7 +13,7 @@
     // Meta data for display purposes
     "meta" : {
         // Name of this plugin that appears in the interface.
-        "label" : "borealisgroup-plugins",
+        "label" : "borealisgroup-plugin",
 
         "description" : "Custom plugins used in borealisgroup",
         "author" : "ziad.beyens@borealisgroup.com",

@@ -59,7 +59,7 @@ for i in range(len(cols)):
     for j in range(len(cols)):
         col1 = cols[i]
         col2 = cols[j]
-        if df[col1].dtype == "float64" and \
+        if df[col1].dtype == "float64" and col1 != col2 and \
            df[col2].dtype == "float64" and col2 in filtered_cols and (col2, col1) not in pairs:
             pairs.append((col1, col2))
 

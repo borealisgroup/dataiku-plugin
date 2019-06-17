@@ -88,13 +88,6 @@
             "label" : "Columns to keep (pattern)",
             "type": "COLUMNS",
             "description":"Patterns of columns to keep"
-        },
-        {
-            "name": "test",
-            "label" : "Test",
-            "type": "ARRAY",
-            "description":"Absolute value of the threshold for removal",
-            "mandatory" : true
         }
     ],
     

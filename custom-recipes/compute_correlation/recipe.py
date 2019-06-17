@@ -46,9 +46,6 @@ from dataiku import pandasutils as pdu
 from eda.filters import filter_columns
 
 # Read recipe inputs
-data_targets_filter_high_corr = dataiku.Dataset("data_without_high_corr")
-data_targets_filter_high_corr_df = data_targets_filter_high_corr.get_dataframe()
-df = data_targets_filter_high_corr_df
 cols = df.columns
 
 df_filtered = filter_columns(df, filter_method=filter_method, col_multiple=col_multiple, col_patterns=col_patterns)

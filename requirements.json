@@ -1,0 +1,6 @@
+{
+    "python" : [
+        {"name":"TA-Lib", "version":">=0.4.17"},
+        {"name":"sqlalchemy", "version":">=0.1"}
+    ]
+}

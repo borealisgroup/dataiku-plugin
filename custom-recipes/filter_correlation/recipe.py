@@ -59,6 +59,7 @@ import pandas as pd, numpy as np
 from dataiku import pandasutils as pdu
 from eda.correlations import get_rejected_variables
 from wp8 import remove_volume_without_close
+from build_features import *
 
 # Read the input
 input_dataset = input_A_datasets[0]
